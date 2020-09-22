@@ -21,6 +21,7 @@ It already include a seed file with pictures for that specific product.
 ### Technologies
 - **Rails**: as backend framework with MVC pattern approach.
 - **Ruby**: as main programming language. Version: 2.6.3
+- **PostgreSQL** as object-relational database.Versions 9.3 and up are supported.
 - **Active Record**: as an ORM Framework provided by Rails, which easily allowed to implement all REST functionalities. 
 - **JSON:API**: used to represent data. 
 
@@ -40,7 +41,9 @@ class Product < ApplicationRecord
     belongs_to :category
 end
 ```
-- Categories: https://shielded-retreat-96681.herokuapp.com/categories
+
+### View
+/categories
 ```json
     [
     {
@@ -57,7 +60,7 @@ end
     }
 ]
 ```
-- Products: https://shielded-retreat-96681.herokuapp.com/products
+/products
 ```json
 [
     {
