@@ -1,24 +1,66 @@
-# README
+# Rails CRUD Application: Grocery app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Grocery app is an easy to use REST API that you can use as backend to implement a grocery app. All you'll have to do is just implement the front end with the thecnology of your choice such as React.
+It already include a seed file with pictures for that specific product. 
 
-Things you may want to cover:
+### How to handle CRUD actions using http methods?
+#### Category
+- GET /categories - Retrieves a list of categories
+- GET /categories/2 - Retrieves a specific category by its id.
+- POST /categories - Creates a new category
+- PUT /categories/1 - Updates category #1
+- DELETE /categories/1 - Deletes category #1
 
-* Ruby version
+#### Products
+- GET /products - Retrieves a list of products
+- GET /products/1 - Retrieves a product by its id.
+- POST /products - Creates a new product
+- PUT /products/1 - Updates product #1
+- DELETE /products/1 - Deletes product #1
 
-* System dependencies
+### Technologies
+- **Rails**: as backend framework with MVC pattern approach.
+- **Ruby**: as main programming language. Version: 2.6.3
+- **Active Record**: as an ORM Framework provided by Rails, which easily allowed to implement all REST functionalities. 
+- **JSON:API**: used to represent data. 
 
-* Configuration
+### Schema diagram
+![schema](./assets/schema_diagram.jpg)
 
-* Database creation
+### Simple Code snippet
+- app/models/category.rb
+```
+class Category < ApplicationRecord
+    has_many :products
+end
+```
+- app/models/product.rb
+```
+class Product < ApplicationRecord
+    belongs_to :category
+end
+```
 
-* Database initialization
+### Link to deployed api
+- https://shielded-retreat-96681.herokuapp.com/
 
-* How to run the test suite
+### Features to be added in a later version
+- Include more retrieve options
+- Improve root route with how to use instructions.
+- Update routes to include /api/ at front. Example: GET /api/products
+- Include nested objects. Example: on the categories route, include all products of each category.
+- Implement docker technology to enable application portability.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Instructions for downloading the code and running it on localhost
+- Fork and clone the repo.
+- In your terminal, run the following commands:
+```
+$ bundle install
+$ rails db:seed
+$ rails server
+```
+- If any issue is presented, please create an issue request on this repo.
 
-* Deployment instructions
-
-* ...
+### Links and Resources
+- Shopping List App using Node and Express.
+https://github.com/shastier/Project-2-ShoppingListApp
