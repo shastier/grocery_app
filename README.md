@@ -6,17 +6,17 @@ It already include a seed file with pictures for that specific product.
 ### How to handle CRUD actions using http methods?
 #### Category
 - GET /categories - Retrieves a list of categories
-- GET /categories/2 - Retrieves a specific category by its id.
+- GET /categories/:id - Retrieves a specific category by its id.
 - POST /categories - Creates a new category
-- PUT /categories/1 - Updates category #1
-- DELETE /categories/1 - Deletes category #1
+- PUT /categories/:id - Updates category with that id
+- DELETE /categories/:id - Deletes category with that id 
 
 #### Products
 - GET /products - Retrieves a list of products
-- GET /products/1 - Retrieves a product by its id.
+- GET /products/:id - Retrieves a product by its id.
 - POST /products - Creates a new product
-- PUT /products/1 - Updates product #1
-- DELETE /products/1 - Deletes product #1
+- PUT /products/:id - Updates product with that id
+- DELETE /products/:id - Deletes product with that id. Example: /products/1
 
 ### Technologies
 - **Rails**: as backend framework with MVC pattern approach.
