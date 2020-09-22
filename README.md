@@ -45,7 +45,7 @@ end
 ### View
 /categories
 ```json
-    [
+[
     {
         "id": 1,
         "name": "Dairy",
