@@ -87,10 +87,12 @@ end
 - https://shielded-retreat-96681.herokuapp.com/
 
 ### Features to be added in a later version
+- Include error handling.
 - Include more retrieve options.
 - Improve root route with how to use instructions.
 - Update routes to include /api/ at front. Example: GET /api/products
 - Include nested objects. Example: on the categories route, include all products of each category.
+- Improve how to present json information, more descriptive: Example: message: "OK", categories:
 - Implement docker technology to enable application portability.
 
 ### Instructions for downloading the code and running it on localhost
