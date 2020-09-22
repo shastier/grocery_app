@@ -29,23 +29,65 @@ It already include a seed file with pictures for that specific product.
 
 ### Simple Code snippet
 - app/models/category.rb
-```
+```ruby
 class Category < ApplicationRecord
     has_many :products
 end
 ```
 - app/models/product.rb
-```
+```ruby
 class Product < ApplicationRecord
     belongs_to :category
 end
+```
+- Categories: https://shielded-retreat-96681.herokuapp.com/categories
+```json
+    [
+    {
+        "id": 1,
+        "name": "Dairy",
+        "created_at": "2020-09-16T01:20:34.951Z",
+        "updated_at": "2020-09-16T01:20:34.951Z"
+    },
+    {
+        "id": 2,
+        "name": "Fruits",
+        "created_at": "2020-09-16T01:20:34.960Z",
+        "updated_at": "2020-09-16T01:20:34.960Z"
+    }
+]
+```
+- Products: https://shielded-retreat-96681.herokuapp.com/products
+```json
+[
+    {
+        "id": 1,
+        "name": "Milk",
+        "description": "Whole Milk, H.E.B., half gallon",
+        "img_url": "https://i.imgur.com/tIFtvKk.jpg",
+        "is_organic": false,
+        "created_at": "2020-09-16T01:20:35.032Z",
+        "updated_at": "2020-09-16T01:20:35.032Z",
+        "category_id": 1
+    },
+    {
+        "id": 2,
+        "name": "Milk",
+        "description": "Whole Milk, H.E.B., one gallon",
+        "img_url": "https://i.imgur.com/jO4jNEb.jpg",
+        "is_organic": false,
+        "created_at": "2020-09-16T01:20:35.040Z",
+        "updated_at": "2020-09-16T01:20:35.040Z",
+        "category_id": 1
+    }
+]
 ```
 
 ### Link to deployed api
 - https://shielded-retreat-96681.herokuapp.com/
 
 ### Features to be added in a later version
-- Include more retrieve options
+- Include more retrieve options.
 - Improve root route with how to use instructions.
 - Update routes to include /api/ at front. Example: GET /api/products
 - Include nested objects. Example: on the categories route, include all products of each category.
